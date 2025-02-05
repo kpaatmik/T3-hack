@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaHotel, FaRobot, FaBus, FaSearch } from 'react-icons/fa';
+import AudioChat from '../components/AudioChat';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -52,8 +53,13 @@ export default function Home() {
               real-time assistance, and seamless transport booking.
             </p>
 
+            {/* Audio-Enabled AI Chat Section */}
+            <div className="mt-12">
+              <AudioChat />
+            </div>
+
             {/* Search Bar */}
-            <form onSubmit={handleSearch} className="mt-8">
+            <form onSubmit={handleSearch} className="mt-12">
               <div className="flex items-center justify-center">
                 <div className="relative flex-grow max-w-lg">
                   <input
